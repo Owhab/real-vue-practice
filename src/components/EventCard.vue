@@ -1,6 +1,7 @@
 <template>
   <div class="event-card">
-    <h1>Hello World</h1>
+    <span>@ {{event.time}} on {{event.date}} </span>
+    <h1>{{event.title}}</h1>
   </div>
   
 </template>
@@ -8,23 +9,14 @@
 <script>
 export default {
   name: 'EventCard',
- /*  props: {
-    msg: String
-  } */
+  props: {
+    event: Object
+  },
 
   data(){
     return{
-      event: {
-        id: 5928101,
-        category: "animal welfare",
-        title: "Cat Adoptation Day",
-        description: "FInd your new feline friend at this event",
-        location: "Meow Town",
-        data: "January 28, 2022",
-        time: "12:00",
-        petsAllowed: true,
-        organizer: "Kal Laydee"
-      }
+      /* eslint-disable */
+      
     }
   }
 }
@@ -34,9 +26,15 @@ export default {
 
 .event-card{
   padding: 20px;
-  width: 250px;
+  width: 40%;
   cursor: pointer;
-  border: 1px solid #;
+  border: 1px solid black;
+  margin: 10px auto;
+}
+
+.event-card:hover{
+  transform: scale(1.01);
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 </style>

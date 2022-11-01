@@ -1,15 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <EventCard/>
+  <!-- <EventCard/> -->
+  <Home/>
+
 </template>
 
 <script>
-import EventCard from './components/EventCard.vue'
+// import EventCard from './components/EventCard.vue'
+import Home from './views/Home.vue';
 
 export default {
   name: 'App',
   components: {
-    EventCard
+    Home,
   }
 }
 </script>
